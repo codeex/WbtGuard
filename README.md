@@ -5,7 +5,7 @@ The config file is wbtguard.ini file.
 
 # Config file
 ```
-[program:Ancn.WebTest]
+[program:WebTest]
 # run directory
 directory=C:\WebTest\bin\Debug\net6.0
 # command
