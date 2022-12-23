@@ -1,0 +1,529 @@
+2022-12-12 15:47:17.7846 Info Message Template Auto Format enabled
+2022-12-12 15:47:17.7918 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 15:47:17.8314 Info Registered target FileTarget(Name=allfile)
+2022-12-12 15:47:17.8314 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 15:47:17.8447 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 15:47:17.8563 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 15:47:17.8681 Info Configuration initialized.
+2022-12-12 15:47:17.8681 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 15:47:17.8681 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 15:47:17.9537 Info Loading NLog config from XML file: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 15:47:17.9537 Info Message Template Auto Format enabled
+2022-12-12 15:47:17.9537 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 15:47:17.9537 Info Registered target FileTarget(Name=allfile)
+2022-12-12 15:47:17.9537 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 15:47:17.9537 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 15:47:17.9537 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 15:47:17.9537 Info Configuration initialized.
+2022-12-12 15:47:17.9537 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:49:24.0520 Info Message Template Auto Format enabled
+2022-12-12 16:49:24.0652 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:49:24.1437 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:49:24.1437 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:49:24.1517 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:49:24.1517 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:49:24.1738 Info Configuration initialized.
+2022-12-12 16:49:24.1820 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:50:24.0463 Info Message Template Auto Format enabled
+2022-12-12 16:50:24.0587 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:50:24.1386 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:50:24.1386 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:50:24.1484 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:50:24.1484 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:50:24.1735 Info Configuration initialized.
+2022-12-12 16:50:24.1814 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:50:24.2120 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:50:24.2439 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:50:24.2752 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:50:52.4635 Info Message Template Auto Format enabled
+2022-12-12 16:50:52.4796 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:50:52.5733 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:50:52.5733 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:50:52.5733 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:50:52.5960 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:50:52.6123 Info Configuration initialized.
+2022-12-12 16:50:52.6233 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:50:52.6585 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:50:52.7266 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:50:52.7654 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:53:22.1265 Info Message Template Auto Format enabled
+2022-12-12 16:53:22.1382 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:53:22.2197 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:53:22.2197 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:53:22.2286 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:53:22.2430 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:53:22.2430 Info Configuration initialized.
+2022-12-12 16:53:22.2630 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:53:22.2937 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:53:22.3206 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:53:22.3550 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:54:00.9268 Info Message Template Auto Format enabled
+2022-12-12 16:54:00.9376 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:54:01.0118 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:54:01.0118 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:54:01.0245 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:54:01.0245 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:54:01.0473 Info Configuration initialized.
+2022-12-12 16:54:01.0667 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:54:01.0967 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:54:01.1193 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:54:01.1581 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:55:14.5307 Info Message Template Auto Format enabled
+2022-12-12 16:55:14.5458 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 16:55:14.6483 Info Registered target FileTarget(Name=allfile)
+2022-12-12 16:55:14.6483 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 16:55:14.6638 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 16:55:14.6815 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 16:55:14.6815 Info Configuration initialized.
+2022-12-12 16:55:14.7052 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 16:55:14.7401 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:55:14.7681 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 16:55:14.8018 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\{shortdate}.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-12 18:01:36.4789 Info Message Template Auto Format enabled
+2022-12-12 18:01:36.4912 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:01:36.5668 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:01:36.5668 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:01:36.5668 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:01:36.5846 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:01:36.5956 Info Configuration initialized.
+2022-12-12 18:01:36.5956 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:02:43.5375 Info Message Template Auto Format enabled
+2022-12-12 18:02:43.5504 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:02:43.6400 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:02:43.6400 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:02:43.6400 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:02:43.6629 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:02:43.6747 Info Configuration initialized.
+2022-12-12 18:02:43.6747 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:03:13.8875 Info Message Template Auto Format enabled
+2022-12-12 18:03:13.9026 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:03:13.9778 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:03:13.9778 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:03:13.9855 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:03:13.9855 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:03:14.0096 Info Configuration initialized.
+2022-12-12 18:03:14.0184 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:03:37.9382 Info Message Template Auto Format enabled
+2022-12-12 18:03:37.9382 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:03:38.0191 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:03:38.0191 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:03:38.0191 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:03:38.0367 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:03:38.0460 Info Configuration initialized.
+2022-12-12 18:03:38.0460 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:45:48.9338 Info Message Template Auto Format enabled
+2022-12-12 18:45:48.9561 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:45:49.1658 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:45:49.1658 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:45:49.1730 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:45:49.1730 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:45:49.1946 Info Configuration initialized.
+2022-12-12 18:45:49.2057 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:47:47.5749 Info Message Template Auto Format enabled
+2022-12-12 18:47:47.5857 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:47:47.6647 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:47:47.6647 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:47:47.6777 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:47:47.6953 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:47:47.7070 Info Configuration initialized.
+2022-12-12 18:47:47.7163 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:49:35.4107 Info Message Template Auto Format enabled
+2022-12-12 18:49:35.4210 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:49:35.4897 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:49:35.4897 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:49:35.4897 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:49:35.5071 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:49:35.5166 Info Configuration initialized.
+2022-12-12 18:49:35.5166 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:50:27.5819 Info Message Template Auto Format enabled
+2022-12-12 18:50:27.5940 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:50:27.6801 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:50:27.6801 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:50:27.6880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:50:27.7010 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:50:27.7010 Info Configuration initialized.
+2022-12-12 18:50:27.7218 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:51:33.1842 Info Message Template Auto Format enabled
+2022-12-12 18:51:33.1953 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:51:33.2793 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:51:33.2793 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:51:33.2793 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:51:33.2982 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:51:33.2982 Info Configuration initialized.
+2022-12-12 18:51:33.3175 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:52:43.0552 Info Message Template Auto Format enabled
+2022-12-12 18:52:43.0670 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:52:43.1473 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:52:43.1473 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:52:43.1561 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:52:43.1692 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:52:43.1692 Info Configuration initialized.
+2022-12-12 18:52:43.1897 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 18:55:22.4935 Info Message Template Auto Format enabled
+2022-12-12 18:55:22.5060 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 18:55:22.5824 Info Registered target FileTarget(Name=allfile)
+2022-12-12 18:55:22.5824 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 18:55:22.5824 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 18:55:22.6053 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 18:55:22.6161 Info Configuration initialized.
+2022-12-12 18:55:22.6236 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 19:02:36.0213 Info Message Template Auto Format enabled
+2022-12-12 19:02:36.0317 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 19:02:36.1026 Info Registered target FileTarget(Name=allfile)
+2022-12-12 19:02:36.1026 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 19:02:36.1103 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 19:02:36.1103 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 19:02:36.1305 Info Configuration initialized.
+2022-12-12 19:02:36.1395 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-12 19:04:32.6956 Info Message Template Auto Format enabled
+2022-12-12 19:04:32.7073 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-12 19:04:32.7879 Info Registered target FileTarget(Name=allfile)
+2022-12-12 19:04:32.7879 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-12 19:04:32.7955 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-12 19:04:32.8117 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-12 19:04:32.8117 Info Configuration initialized.
+2022-12-12 19:04:32.8330 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 08:59:15.9754 Info Message Template Auto Format enabled
+2022-12-13 08:59:15.9984 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 08:59:16.1595 Info Registered target FileTarget(Name=allfile)
+2022-12-13 08:59:16.1595 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 08:59:16.1595 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 08:59:16.1771 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 08:59:16.1771 Info Configuration initialized.
+2022-12-13 08:59:16.1940 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 09:15:23.6327 Info Message Template Auto Format enabled
+2022-12-13 09:15:23.6442 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 09:15:23.7168 Info Registered target FileTarget(Name=allfile)
+2022-12-13 09:15:23.7168 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 09:15:23.7249 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 09:15:23.7370 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 09:15:23.7370 Info Configuration initialized.
+2022-12-13 09:15:23.7557 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 09:16:41.7823 Info Message Template Auto Format enabled
+2022-12-13 09:16:41.7823 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 09:16:41.8741 Info Registered target FileTarget(Name=allfile)
+2022-12-13 09:16:41.8741 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 09:16:41.8846 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 09:16:41.8982 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 09:16:41.9105 Info Configuration initialized.
+2022-12-13 09:16:41.9105 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 09:22:15.0966 Info Message Template Auto Format enabled
+2022-12-13 09:22:15.0966 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 09:22:15.1924 Info Registered target FileTarget(Name=allfile)
+2022-12-13 09:22:15.1924 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 09:22:15.1924 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 09:22:15.2134 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 09:22:15.2290 Info Configuration initialized.
+2022-12-13 09:22:15.2376 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 09:23:15.4215 Info Message Template Auto Format enabled
+2022-12-13 09:23:15.4321 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 09:23:15.5058 Info Registered target FileTarget(Name=allfile)
+2022-12-13 09:23:15.5058 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 09:23:15.5058 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 09:23:15.5250 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 09:23:15.5353 Info Configuration initialized.
+2022-12-13 09:23:15.5353 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 09:24:25.2659 Info Message Template Auto Format enabled
+2022-12-13 09:24:25.2659 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 09:24:25.3620 Info Registered target FileTarget(Name=allfile)
+2022-12-13 09:24:25.3620 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 09:24:25.3620 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 09:24:25.3845 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 09:24:25.3960 Info Configuration initialized.
+2022-12-13 09:24:25.3960 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 10:45:41.2505 Info Message Template Auto Format enabled
+2022-12-13 10:45:41.2715 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 10:45:41.4953 Info Registered target FileTarget(Name=allfile)
+2022-12-13 10:45:41.5016 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 10:45:41.5016 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 10:45:41.5235 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 10:45:41.5366 Info Configuration initialized.
+2022-12-13 10:45:41.5366 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 10:47:25.7987 Info Message Template Auto Format enabled
+2022-12-13 10:47:25.7987 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 10:47:25.8870 Info Registered target FileTarget(Name=allfile)
+2022-12-13 10:47:25.8870 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 10:47:25.8950 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 10:47:25.9072 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 10:47:25.9072 Info Configuration initialized.
+2022-12-13 10:47:25.9266 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 10:49:15.6738 Info Message Template Auto Format enabled
+2022-12-13 10:49:15.6885 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 10:49:15.7616 Info Registered target FileTarget(Name=allfile)
+2022-12-13 10:49:15.7616 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 10:49:15.7695 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 10:49:15.7695 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 10:49:15.7911 Info Configuration initialized.
+2022-12-13 10:49:15.7987 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 10:57:12.3103 Info Message Template Auto Format enabled
+2022-12-13 10:57:12.3209 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 10:57:12.4117 Info Registered target FileTarget(Name=allfile)
+2022-12-13 10:57:12.4117 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 10:57:12.4117 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 10:57:12.4314 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 10:57:12.4432 Info Configuration initialized.
+2022-12-13 10:57:12.4432 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 10:58:33.1731 Info Message Template Auto Format enabled
+2022-12-13 10:58:33.1731 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 10:58:33.2568 Info Registered target FileTarget(Name=allfile)
+2022-12-13 10:58:33.2568 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 10:58:33.2568 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 10:58:33.2769 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 10:58:33.2872 Info Configuration initialized.
+2022-12-13 10:58:33.2872 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 11:18:13.0261 Info Message Template Auto Format enabled
+2022-12-13 11:18:13.0467 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 11:18:13.2544 Info Registered target FileTarget(Name=allfile)
+2022-12-13 11:18:13.2544 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 11:18:13.2544 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 11:18:13.2791 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 11:18:13.2963 Info Configuration initialized.
+2022-12-13 11:18:13.3073 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 11:19:56.3812 Info Message Template Auto Format enabled
+2022-12-13 11:19:56.3924 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 11:19:56.4728 Info Registered target FileTarget(Name=allfile)
+2022-12-13 11:19:56.4728 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 11:19:56.4728 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 11:19:56.4940 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 11:19:56.5077 Info Configuration initialized.
+2022-12-13 11:19:56.5160 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 11:20:10.1854 Info Message Template Auto Format enabled
+2022-12-13 11:20:10.1974 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 11:20:10.2745 Info Registered target FileTarget(Name=allfile)
+2022-12-13 11:20:10.2745 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 11:20:10.2824 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 11:20:10.2993 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 11:20:10.2993 Info Configuration initialized.
+2022-12-13 11:20:10.3219 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 11:49:50.0491 Info Message Template Auto Format enabled
+2022-12-13 11:49:50.0491 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 11:49:50.1453 Info Registered target FileTarget(Name=allfile)
+2022-12-13 11:49:50.1453 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 11:49:50.1576 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 11:49:50.1741 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 11:49:50.1741 Info Configuration initialized.
+2022-12-13 11:49:50.1958 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:20:24.5597 Info Message Template Auto Format enabled
+2022-12-13 13:20:24.5736 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:20:24.6903 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:20:24.6903 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:20:24.6903 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:20:24.7158 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:20:24.7298 Info Configuration initialized.
+2022-12-13 13:20:24.7411 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:22:29.6342 Info Message Template Auto Format enabled
+2022-12-13 13:22:29.6493 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:22:29.7388 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:22:29.7388 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:22:29.7388 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:22:29.7626 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:22:29.7736 Info Configuration initialized.
+2022-12-13 13:22:29.7829 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:23:02.0320 Info Message Template Auto Format enabled
+2022-12-13 13:23:02.0320 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:23:02.1239 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:23:02.1239 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:23:02.1322 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:23:02.1450 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:23:02.1567 Info Configuration initialized.
+2022-12-13 13:23:02.1567 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:23:20.1789 Info Message Template Auto Format enabled
+2022-12-13 13:23:20.1926 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:23:20.2794 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:23:20.2794 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:23:20.2883 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:23:20.3011 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:23:20.3192 Info Configuration initialized.
+2022-12-13 13:23:20.3290 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:24:26.3338 Info Message Template Auto Format enabled
+2022-12-13 13:24:26.3457 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:24:26.4316 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:24:26.4316 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:24:26.4426 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:24:26.4558 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:24:26.4714 Info Configuration initialized.
+2022-12-13 13:24:26.4714 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:24:45.8588 Info Message Template Auto Format enabled
+2022-12-13 13:24:45.8749 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:24:45.9657 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:24:45.9657 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:24:45.9739 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:24:45.9891 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:24:46.0038 Info Configuration initialized.
+2022-12-13 13:24:46.0038 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:47:14.6356 Info Message Template Auto Format enabled
+2022-12-13 13:47:14.6512 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:47:14.7331 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:47:14.7331 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:47:14.7434 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:47:14.7629 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:47:14.7756 Info Configuration initialized.
+2022-12-13 13:47:14.7850 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:55:27.1758 Info Message Template Auto Format enabled
+2022-12-13 13:55:27.1758 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:55:27.2796 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:55:27.2796 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:55:27.2885 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:55:27.3018 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:55:27.3126 Info Configuration initialized.
+2022-12-13 13:55:27.3126 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 13:58:17.1929 Info Message Template Auto Format enabled
+2022-12-13 13:58:17.2095 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 13:58:17.3010 Info Registered target FileTarget(Name=allfile)
+2022-12-13 13:58:17.3010 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 13:58:17.3010 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 13:58:17.3230 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 13:58:17.3370 Info Configuration initialized.
+2022-12-13 13:58:17.3453 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 14:00:34.0390 Info Message Template Auto Format enabled
+2022-12-13 14:00:34.0516 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:00:34.1375 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:00:34.1375 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:00:34.1475 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 14:00:34.1628 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:00:34.1764 Info Configuration initialized.
+2022-12-13 14:00:34.1764 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 14:04:01.5430 Info Message Template Auto Format enabled
+2022-12-13 14:04:01.5546 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:04:01.6404 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:04:01.6404 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:04:01.6509 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 14:04:01.6635 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:04:01.6752 Info Configuration initialized.
+2022-12-13 14:04:01.6752 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 14:04:59.1647 Info Message Template Auto Format enabled
+2022-12-13 14:04:59.1776 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:04:59.2630 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:04:59.2630 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:04:59.2712 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 14:04:59.2845 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:04:59.2845 Info Configuration initialized.
+2022-12-13 14:04:59.3029 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 14:22:07.7970 Info Message Template Auto Format enabled
+2022-12-13 14:22:07.8090 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:22:07.8914 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:22:07.8914 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:22:07.8914 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-13 14:22:07.9129 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=26, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:22:07.9237 Info Configuration initialized.
+2022-12-13 14:22:07.9237 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False

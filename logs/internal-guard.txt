@@ -1,0 +1,130 @@
+2022-12-13 14:39:27.8071 Info Message Template Auto Format enabled
+2022-12-13 14:39:27.8200 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:39:27.9080 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:39:27.9080 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:39:27.9290 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:39:27.9290 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 14:39:27.9427 Info Configuration initialized.
+2022-12-13 14:39:27.9427 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 14:57:07.8912 Info Message Template Auto Format enabled
+2022-12-13 14:57:07.8974 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 14:57:07.9797 Info Registered target FileTarget(Name=allfile)
+2022-12-13 14:57:07.9797 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 14:57:08.0007 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 14:57:08.0007 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 14:57:08.0007 Info Configuration initialized.
+2022-12-13 14:57:08.0202 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 15:01:05.2818 Info Message Template Auto Format enabled
+2022-12-13 15:01:05.2818 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 15:01:05.3923 Info Registered target FileTarget(Name=allfile)
+2022-12-13 15:01:05.3923 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 15:01:05.4154 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 15:01:05.4154 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 15:01:05.4285 Info Configuration initialized.
+2022-12-13 15:01:05.4285 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 15:01:05.4709 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs/2022-12-13.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\2022-12-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-13 15:01:05.5016 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs/2022-12-13.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\logs\2022-12-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2022-12-13 15:35:02.8494 Info Message Template Auto Format enabled
+2022-12-13 15:35:02.8494 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 15:35:02.9674 Info Registered target FileTarget(Name=allfile)
+2022-12-13 15:35:02.9674 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 15:35:02.9891 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 15:35:02.9891 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 15:35:03.0012 Info Configuration initialized.
+2022-12-13 15:35:03.0012 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:24:21.0572 Info Message Template Auto Format enabled
+2022-12-13 16:24:21.0634 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:24:21.4194 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:24:21.4194 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:24:21.4384 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:24:21.4384 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:24:21.4384 Info Configuration initialized.
+2022-12-13 16:24:21.4589 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:28:05.4212 Info Message Template Auto Format enabled
+2022-12-13 16:28:05.4270 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:28:05.5519 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:28:05.5519 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:28:05.5736 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:28:05.5736 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:28:05.5865 Info Configuration initialized.
+2022-12-13 16:28:05.5948 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:28:57.3284 Info Message Template Auto Format enabled
+2022-12-13 16:28:57.3350 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:28:57.4542 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:28:57.4542 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:28:57.4736 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:28:57.4736 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:28:57.4855 Info Configuration initialized.
+2022-12-13 16:28:57.4855 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:33:13.7991 Info Message Template Auto Format enabled
+2022-12-13 16:33:13.7991 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:33:13.9183 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:33:13.9183 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:33:13.9372 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:33:13.9416 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:33:13.9416 Info Configuration initialized.
+2022-12-13 16:33:13.9561 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:34:20.6548 Info Message Template Auto Format enabled
+2022-12-13 16:34:20.6607 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:34:20.7734 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:34:20.7734 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:34:20.7938 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:34:20.7995 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:34:20.7995 Info Configuration initialized.
+2022-12-13 16:34:20.8148 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:41:30.8167 Info Message Template Auto Format enabled
+2022-12-13 16:41:30.8167 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:41:30.9394 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:41:30.9394 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:41:30.9606 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:41:30.9606 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:41:30.9733 Info Configuration initialized.
+2022-12-13 16:41:30.9901 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:42:11.6790 Info Message Template Auto Format enabled
+2022-12-13 16:42:11.6790 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:42:11.7991 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:42:11.7991 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:42:11.8218 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:42:11.8218 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:42:11.8342 Info Configuration initialized.
+2022-12-13 16:42:11.8342 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:43:03.8287 Info Message Template Auto Format enabled
+2022-12-13 16:43:03.8344 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:43:03.9503 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:43:03.9503 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:43:03.9704 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:43:03.9704 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:43:03.9704 Info Configuration initialized.
+2022-12-13 16:43:03.9909 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:51:54.4663 Info Message Template Auto Format enabled
+2022-12-13 16:51:54.4763 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:51:54.6015 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:51:54.6015 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:51:54.6248 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:51:54.6297 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:51:54.6297 Info Configuration initialized.
+2022-12-13 16:51:54.6462 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2022-12-13 16:55:06.9326 Info Message Template Auto Format enabled
+2022-12-13 16:55:06.9387 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 16:55:07.0930 Info Registered target FileTarget(Name=allfile)
+2022-12-13 16:55:07.0930 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-13 16:55:07.1139 Info Validating config: TargetNames=allfile, ConfigItems=28, FilePath=C:\Users\ANCN059\source\repos\Ancn.Framework\Ancn.WbtGuardService\bin\Debug\net6.0\NLog.config
+2022-12-13 16:55:07.1139 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: lifetimeConsole
+2022-12-13 16:55:07.1262 Info Configuration initialized.
+2022-12-13 16:55:07.1262 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
