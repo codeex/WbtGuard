@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Topshelf.Logging;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Hosting.Server;
+using WbtGuardService.Hubs;
 
 namespace Ancn.WbtGuardService
 {
@@ -20,6 +21,7 @@ namespace Ancn.WbtGuardService
 
         public void ConfigureServices(IServiceCollection services)
         {
+             services.AddSignalR();
             services.AddRazorPages();
             services.AddHostedService<DaemonService>();
         }
@@ -47,6 +49,7 @@ namespace Ancn.WbtGuardService
                     app.UseAuthorization();
                     app.UseEndpoints(endpoints =>
                     {
+                        endpoints.MapHub<MonitorHub>("/monitor");
                         endpoints.MapRazorPages();
                     });
                     _logger.Info($"web服务: {string.Join(",", url)}");

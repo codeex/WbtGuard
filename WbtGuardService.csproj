@@ -13,6 +13,7 @@
 		<PackageReference Include="Topshelf" Version="4.3.0" />
 		<PackageReference Include="Topshelf.NLog" Version="4.3.0" />
 		<PackageReference Include="TopShelf.ServiceInstaller" Version="4.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="6.0.12" />
 	</ItemGroup>
 
 	<ItemGroup>
