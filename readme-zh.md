@@ -28,5 +28,14 @@ env=
 默认启动管理页面 http://localhost:8088 , 可以控制服务重启、停止、清理日志或查看日志（8K）.
 ![image](https://user-images.githubusercontent.com/3210368/211051096-37f96786-f3d0-4537-bce2-5d5eb881b123.png)
 
+# 运行程序
+```shell
+WbtGuardService.exe install --autostart 
+WbtGuardService.exe start
+```
+
+运行后会作为服务安装在系统内，可以查找 guard service.
+如果需要卸载，可以使用`WbtGuardService.exe uninstall`
+
 # 任何意见
 可以在issue内提，或联系微信。
