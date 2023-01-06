@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.action > a {
+    margin: 0 6px;
+   
+}

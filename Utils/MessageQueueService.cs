@@ -9,7 +9,7 @@ public class MessageQueueService : IDisposable
 {
     private Channel<Message> _channelR2S;
 
-    public ChannelReader<Message> Reader { get; private set; }
+    public ChannelReader<Message> Reader => _channelR2S.Reader;
     public MessageQueueService()
     {
         var options = new BoundedChannelOptions(10)

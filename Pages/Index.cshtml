@@ -5,6 +5,96 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">守护程序列表</h1>
+    <div id="services">
+        <table class="table table-bordered">
+            <caption>WbtGuardService 1.0</caption>
+            <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>描述</th>
+                    <th>程序名</th>
+                    <th>控制</th>
+                </tr>
+            </thead>
+            <tbody id="svrlist">
+
+            </tbody>
+        </table>
+    </div>
 </div>
+
+@section Scripts{
+    <script lang="javascript">
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/monitor")
+            .withAutomaticReconnect({
+                nextRetryDelayInMilliseconds: retryContext => {
+                    return Math.random() * 10000;
+                }
+            })
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+
+        async function start() {
+            try {
+                await connection.start();
+                console.log("SignalR Connected.");
+
+                var li = '<tr id="$id"><td class="state">$satte</td><td class="desc">$desc</td><td class="id">$id</td><td class="action">'+
+                     '<a click="exec(\'$id\',\'Restart\')" href="javascript:void(0);">重启</a>'+                    
+                    '<a click="exec(\'$id\',\'Start\')" href="javascript:void(0);">启动</a>' +
+                    '<a click="exec(\'$id\',\'Stop\')" href="javascript:void(0);">停止</a>' +
+                    '<a click="exec(\'$id\',\'ClearLog\')" href="javascript:void(0);">清理日志</a>' +
+                    '<a click="exec(\'$id\',\'LastLogs\')" href="javascript:void(0);">查看日志</a>' +
+                    '</td></tr>'
+
+                try{
+                    var services  = await connection.invoke("GetServices");
+                    console.log(services);
+                    if(services){
+                        $("#svrlist").html();
+                        for(var i=0;i< services.length;i++){
+                                var s = li.replace(/\$id/g, services[i])
+                                    .replace(/\$satte/g, '未知')
+                                    .replace(/\$desc/g, '未知');
+                                $("#svrlist").append(s)
+                        }
+                    }
+                    await connection.invoke("Status",null);
+                }
+                catch(e){
+                    console.log(e);
+                }
+                            
+            } catch (err) {
+                console.log(err);
+                setTimeout(start, 5000);
+            }
+        };
+
+        connection.on("Status",msg =>{
+            if(msg && msg.command){
+                if(msg.command=='Status'){
+                    var id = msg.processName;
+                    var parent = $(document.getElementById(id));
+                    parent.children('.state').text(msg.status.status);
+                    if(msg.status.pid && msg.status.upTime){
+                        parent.children('.desc').text('[' + msg.status.pid  + '],运行:' + msg.status.upTime);
+                    }
+                    else{
+                        parent.children('.desc').text('');
+                    }
+                    
+                }
+            }
+            console.log('status',msg)
+        });
+        connection.onclose(async () => {
+            await start();
+        });
+
+        // Start the connection.
+        start();
+    </script>
+}

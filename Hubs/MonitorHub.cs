@@ -13,8 +13,22 @@ namespace WbtGuardService.Hubs;
 
 public class MonitorHub : Hub<IMonitorClient>
 {
+    public MonitorHub(MessageQueueService service, IConfiguration config)
+    {
+        this.service = service;
+        this.config = config;
+    }
     private static int _timeout = 30000;
-    public async Task ClearLog(string processName, MessageQueueService service)
+    private readonly MessageQueueService service;
+    private readonly IConfiguration config;
+
+    public override async Task OnConnectedAsync()
+    {
+        await base.OnConnectedAsync();
+        //await this.Status(null);
+    }
+
+    public async Task ClearLog(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
@@ -35,12 +49,12 @@ public class MonitorHub : Hub<IMonitorClient>
             });
         }
     }
-    public List<string> GetServices(IConfiguration config)
+    public List<string> GetServices()
     {
         var gsc = ParseGuardServiceConfig.Load(config);
         return gsc.Select(x=>x.Name).ToList();
     }
-    public async Task LastLogs(string processName, MessageQueueService service)
+    public async Task LastLogs(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
@@ -64,7 +78,7 @@ public class MonitorHub : Hub<IMonitorClient>
 
     }
 
-    public async Task Restart(string processName, MessageQueueService service)
+    public async Task Restart(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
@@ -95,7 +109,7 @@ public class MonitorHub : Hub<IMonitorClient>
         }
     }
 
-    public async Task Start(string processName, MessageQueueService service)
+    public async Task Start(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
@@ -109,7 +123,7 @@ public class MonitorHub : Hub<IMonitorClient>
 
     }
 
-    public async Task Status(string processName, MessageQueueService service)
+    public async Task Status(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
@@ -123,7 +137,7 @@ public class MonitorHub : Hub<IMonitorClient>
 
     }
 
-    public async Task Stop(string processName, MessageQueueService service)
+    public async Task Stop(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);

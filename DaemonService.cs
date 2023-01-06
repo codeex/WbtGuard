@@ -88,7 +88,7 @@ public class DaemonService : BackgroundService, IDisposable
                     await hubContext.Clients.Client(command.ClientId).SendAsync("LastLogs", new Message
                     {
                         Command = command.Command,
-                        ProcessName = command.ProcessName,
+                        ProcessName = pe.Name,
                         Content = p?.ToString()
                     });
                 }
@@ -98,8 +98,14 @@ public class DaemonService : BackgroundService, IDisposable
                     await hubContext.Clients.Client(command.ClientId).SendAsync("Status", new Message
                     {
                         Command = command.Command,
-                        ProcessName = command.ProcessName,
-                        Content = s
+                        ProcessName = pe.Name,
+                        Content = s,
+                        Status = new ProcessRunStatus
+                        {
+                            Status = s,
+                            Pid = (p as Process)?.Id.ToString(),
+                            UpTime = (p as Process)?.UserProcessorTime.ToString("hh:mm:ss"),
+                        }
                     });
                 }
             }
