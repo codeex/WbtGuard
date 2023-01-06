@@ -34,8 +34,12 @@ WbtGuardService.exe install --autostart
 WbtGuardService.exe start
 ```
 
+运行命令必须以管理员身份执行。
 运行后会作为服务安装在系统内，可以查找 guard service.
 如果需要卸载，可以使用`WbtGuardService.exe uninstall`
 
+# 常见问题
+![image](https://user-images.githubusercontent.com/3210368/211055963-e13338e1-1628-49ba-8ab8-e8cac4013648.png)
+运行命令必须以管理员身份执行。
 # 任何意见
 可以在issue内提，或联系微信。
