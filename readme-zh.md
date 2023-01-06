@@ -24,5 +24,9 @@ arguments=
 #多个环境变量用;分割。
 env=
 ```
+# 管理页面
+默认启动管理页面 http://localhost:8088 , 可以控制服务重启、停止、清理日志或查看日志（8K）.
+![image](https://user-images.githubusercontent.com/3210368/211051096-37f96786-f3d0-4537-bce2-5d5eb881b123.png)
+
 # 任何意见
 可以在issue内提，或联系微信。
