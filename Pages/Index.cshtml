@@ -1,14 +1,14 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Wbt Guard Service";
 }
 
 <div class="text-center">
     <h1 class="display-4">守护程序列表</h1>
     <div id="services">
         <table class="table table-bordered">
-            <caption>WbtGuardService 1.0</caption>
+            @*<caption>WbtGuardService 1.0</caption>*@
             <thead>
                 <tr>
                     <th>状态</th>
@@ -24,8 +24,39 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="log" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="logContent">
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>                
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts{
     <script lang="javascript">
+        var myModal = new bootstrap.Modal(document.getElementById('log'), {
+                keyboard: true
+            })
+        var tt = setInterval(execStatus,1000);
+        function execStatus(){
+            exec(null, 'Status').then(res=>{})
+        }
+
+        async function  exec(processName, command)
+        {
+            await connection.invoke(command, processName);
+            
+        }
         const connection = new signalR.HubConnectionBuilder()
             .withUrl("/monitor")
             .withAutomaticReconnect({
@@ -42,11 +73,11 @@
                 console.log("SignalR Connected.");
 
                 var li = '<tr id="$id"><td class="state">$satte</td><td class="desc">$desc</td><td class="id">$id</td><td class="action">'+
-                     '<a click="exec(\'$id\',\'Restart\')" href="javascript:void(0);">重启</a>'+                    
-                    '<a click="exec(\'$id\',\'Start\')" href="javascript:void(0);">启动</a>' +
-                    '<a click="exec(\'$id\',\'Stop\')" href="javascript:void(0);">停止</a>' +
-                    '<a click="exec(\'$id\',\'ClearLog\')" href="javascript:void(0);">清理日志</a>' +
-                    '<a click="exec(\'$id\',\'LastLogs\')" href="javascript:void(0);">查看日志</a>' +
+                     '<a onclick="exec(\'$id\',\'Restart\')" href="javascript:void(0);">重启</a>'+
+                    '<a onclick="exec(\'$id\',\'Start\')" href="javascript:void(0);">启动</a>' +
+                    '<a onclick="exec(\'$id\',\'Stop\')" href="javascript:void(0);">停止</a>' +
+                    '<a onclick="exec(\'$id\',\'ClearLogs\')" href="javascript:void(0);">清理日志</a>' +
+                    '<a onclick="exec(\'$id\',\'LastLogs\')" href="javascript:void(0);">查看日志</a>' +
                     '</td></tr>'
 
                 try{
@@ -82,13 +113,33 @@
                     if(msg.status.pid && msg.status.upTime){
                         parent.children('.desc').text('[' + msg.status.pid  + '],运行:' + msg.status.upTime);
                     }
+                    else if (msg.status.pid) {
+                        parent.children('.desc').text('[' + msg.status.pid + '],运行:');
+                    }
                     else{
                         parent.children('.desc').text('');
+                    }                    
+                }
+                else{
+                    var id = msg.processName;
+                    if(msg.status){
+                        var parent = $(document.getElementById(id));
+                        parent.children('.state').text(msg.status.status);
                     }
-                    
                 }
             }
-            console.log('status',msg)
+            //console.log('status',msg)
+        });
+        connection.on("LastLogs", msg => {
+            if (msg && msg.command) {
+                if (msg.command == 'LastLogs') {
+                    var id = msg.processName;
+                    $('#staticBackdropLabel').text('程序 ' + id);
+                    $('#logContent').text(msg.content)
+                    myModal.show();
+
+                }
+            }            
         });
         connection.onclose(async () => {
             await start();

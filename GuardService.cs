@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Topshelf.Logging;
 
 
-namespace Ancn.WbtGuardService
+namespace WbtGuardService
 {
     
     public class GuardService 

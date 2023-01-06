@@ -1,4 +1,4 @@
-﻿using Ancn.WbtGuardService.Utils;
+﻿using WbtGuardService.Utils;
 
 using CliWrap;
 
@@ -16,9 +16,9 @@ using System.Threading;
 using Topshelf.Logging;
 
 using WbtGuardService.Hubs;
-using WbtGuardService.Utils;
 
-namespace Ancn.WbtGuardService;
+
+namespace WbtGuardService;
 
 public class DaemonService : BackgroundService, IDisposable
 {
@@ -55,7 +55,8 @@ public class DaemonService : BackgroundService, IDisposable
             _logger.Info("检查配置的程序是否启动...");
             foreach (var c in pes)
             {
-                c.Execute();                                   
+                var p = c.Execute();
+                //await NotifyStatus(c.Name, p);
             }
 
             timeoutSource.TryReset();
@@ -74,6 +75,26 @@ public class DaemonService : BackgroundService, IDisposable
         pes.ForEach(x => x.Dispose());
     }
 
+    private async Task NotifyStatus(string name, MyProcessInfo p)
+    {
+        ProcessRunStatus status;
+        var s = p?.Id != null ? "运行" : "停止";        
+        
+        status = new ProcessRunStatus
+        {
+            Status = s,
+            Pid = p?.Id,
+            UpTime = (p?.Id !=null) ? (DateTime.Now - p.StartTime).ToString(@"dd\.hh\:mm\:ss") :"",
+        };
+       
+        await hubContext.Clients.All.SendAsync("Status", new Message
+        {
+            Command = "Status",
+            ProcessName = name ?? p?.ProcessName,
+            Content = s,
+            Status = status
+        });
+    }
     private async Task  ExecuteCommand(Message command, List<ProcessExecutor> pes)
     {
         //操作所有进程
@@ -92,21 +113,15 @@ public class DaemonService : BackgroundService, IDisposable
                         Content = p?.ToString()
                     });
                 }
-                if (command.Command == "Status")
+                else if(command.Command == "ClearLogs")
+                { }
+                else if (command.Command == "Status")
                 {
-                    var s = p != null ? "运行" : (command.Command == "Restart" ? "重启中" : "停止");
-                    await hubContext.Clients.Client(command.ClientId).SendAsync("Status", new Message
-                    {
-                        Command = command.Command,
-                        ProcessName = pe.Name,
-                        Content = s,
-                        Status = new ProcessRunStatus
-                        {
-                            Status = s,
-                            Pid = (p as Process)?.Id.ToString(),
-                            UpTime = (p as Process)?.UserProcessorTime.ToString("hh:mm:ss"),
-                        }
-                    });
+                    await NotifyStatus(pe.Name, p as MyProcessInfo);
+                }
+                else
+                {
+                    await NotifyStatus(pe.Name, p as MyProcessInfo);
                 }
             }
         }
@@ -124,21 +139,15 @@ public class DaemonService : BackgroundService, IDisposable
                     Content = p?.ToString()
                 });
             }
-            if (command.Command == "Status")
+            else if (command.Command == "ClearLogs")
+            { }
+            else if (command.Command == "Status")
             {
-                var s = p != null ? "运行" : (command.Command =="Restart"?"重启中":"停止");
-                await hubContext.Clients.Client(command.ClientId).SendAsync("Status", new Message
-                {
-                    Command = command.Command,
-                    ProcessName = command.ProcessName,
-                    Content = s,
-                    Status = new ProcessRunStatus
-                    {
-                        Status = s,
-                        Pid = (p as Process)?.Id.ToString(),
-                        UpTime = (p as Process)?.UserProcessorTime.ToString("hh:mm:ss"),
-                    }
-                });
+                await NotifyStatus(pe.Name, p as MyProcessInfo);
+            }
+            else
+            {
+                await NotifyStatus(pe.Name, p as MyProcessInfo);
             }
         }
     }

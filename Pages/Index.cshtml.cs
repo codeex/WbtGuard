@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Ancn.WbtGuardService.Pages
+namespace WbtGuardService.Pages
 {
     public class IndexModel : PageModel
     {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting.Server;
 using WbtGuardService.Hubs;
 using WbtGuardService.Utils;
 
-namespace Ancn.WbtGuardService
+namespace WbtGuardService
 {
     public class Startup
     {

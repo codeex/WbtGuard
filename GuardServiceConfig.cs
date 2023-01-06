@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ancn.WbtGuardService
+namespace WbtGuardService
 {
     public class GuardServiceConfig
     {

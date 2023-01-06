@@ -13,7 +13,9 @@ using System.Text.Unicode;
 
 using Topshelf.Logging;
 
-namespace Ancn.WbtGuardService.Utils
+using WbtGuardService.Utils;
+
+namespace WbtGuardService.Utils
 {
     public class ProcessExecutor : IDisposable
     {
@@ -67,16 +69,17 @@ namespace Ancn.WbtGuardService.Utils
         /// 定时检查执行
         /// </summary>
         /// <returns></returns>
-        public virtual Process Execute()
+        public virtual MyProcessInfo Execute()
         {
             if (_isManualStop) return null;
 
             var bDir = !string.IsNullOrEmpty(this.config.Directory);
             Process p = Process.GetProcessesByName(config.Name)?.FirstOrDefault();
             nativeProcess = p;
+            var mp = new MyProcessInfo(p);
             if (p == null)
             {
-                p = StartProcess();  
+                mp = StartProcess();  
             }
             else if (originPid == 0 || originPid != p.Id)
             {
@@ -89,7 +92,7 @@ namespace Ancn.WbtGuardService.Utils
                 {
                     try
                     {
-                        this.RestartProcess();
+                        mp = this.RestartProcess();
                     }
                     catch (Exception ex)
                     {
@@ -101,10 +104,10 @@ namespace Ancn.WbtGuardService.Utils
             {// do nothing
 
             }            
-            return p;
+            return mp;
         }
 
-        private  Process StopProcess()
+        private MyProcessInfo StopProcess()
         {
             Process p = Process.GetProcessesByName(config.Name)?.FirstOrDefault();
             if (p == null)
@@ -126,11 +129,11 @@ namespace Ancn.WbtGuardService.Utils
                 }
             }           
             nativeProcess = p;
-            return p;
+            return new MyProcessInfo(p);
         }
-        private Process RestartProcess()
+        private MyProcessInfo RestartProcess()
         {
-            Process p = null;
+            MyProcessInfo p = null;
             try
             {
                 p = this.StopProcess();
@@ -143,7 +146,7 @@ namespace Ancn.WbtGuardService.Utils
             return p;
         }
 
-        private Process StartProcess()
+        private MyProcessInfo StartProcess()
         {
             _logger.Info($"开始程序 {this.config.Name}...");
             var bDir = !string.IsNullOrEmpty(this.config.Directory);
@@ -158,7 +161,8 @@ namespace Ancn.WbtGuardService.Utils
                     RedirectStandardError = stderrorStream != null,
                     WorkingDirectory = bDir ? this.config.Directory : AppDomain.CurrentDomain.BaseDirectory,
                     Arguments = this.config.Arguments,
-                    CreateNoWindow = true,                   
+                    CreateNoWindow = true,   
+                    WindowStyle = ProcessWindowStyle.Hidden,
                     //StandardOutputEncoding = Encoding.UTF8,
                     //StandardErrorEncoding = Encoding.UTF8,
                 };
@@ -210,7 +214,7 @@ namespace Ancn.WbtGuardService.Utils
             }
             originPid = p?.Id ?? 0;
             nativeProcess = p;
-            return p;
+            return new MyProcessInfo(p) ;
         }
         private void P_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
@@ -262,7 +266,7 @@ namespace Ancn.WbtGuardService.Utils
         {
             var redirectStdOut = !string.IsNullOrEmpty(this.config.StdOutFile);
             var redirectStdErr = !string.IsNullOrEmpty(this.config.StdErrorFile);
-            Process p = null;
+            MyProcessInfo p = null;
             if(command == "Start")
             {
                 _isManualStop = false;
@@ -275,7 +279,7 @@ namespace Ancn.WbtGuardService.Utils
             }
             else if (command == "Restart")
             {
-                _isManualStop = true;
+                _isManualStop = false;
                 p = this.RestartProcess();
             }
             else if(command == "LastLogs")
@@ -284,15 +288,30 @@ namespace Ancn.WbtGuardService.Utils
                 {
                     try
                     {         
-                        byte[] buffer = new byte[4096];
+                        byte[] buffer = new byte[8192];
                         using (var stream = new FileStream(this.config.StdOutFile, FileMode.Open,
                         FileAccess.Read, FileShare.ReadWrite))
                         {
                             long len = stream.Length;
-                            stream.Seek(-4096, SeekOrigin.End);
-                            stream.Read(buffer);
-                            var log = Encoding.UTF8.GetString(buffer);
-                            return log;
+                            if (len >= 8192)
+                            {
+                                stream.Seek(len - 8192, SeekOrigin.Begin);
+                                stream.Read(buffer);
+                                var log = Encoding.UTF8.GetString(buffer);
+                                return log;
+                            }
+                            else if(len == 0)
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                stream.Seek(0, SeekOrigin.Begin);
+                                stream.Read(buffer);
+                                var log = Encoding.UTF8.GetString(buffer,0,(int)len);
+                                return log;
+                            }
+                            
                         }
                         
                     }
@@ -309,7 +328,16 @@ namespace Ancn.WbtGuardService.Utils
                 {
                     try
                     {
-                        File.Delete(this.config.StdOutFile);
+                        using (var stream = new FileStream(this.config.StdOutFile,  FileMode.Truncate,
+                            FileAccess.Write, FileShare.ReadWrite))
+                        {
+                            stream.Seek(0, SeekOrigin.Begin);
+                            stream.SetLength(0);
+                            stream.Flush();
+                        }
+                        stdoutStream.Close();
+                        stdoutStream = new FileStream(this.config.StdOutFile, FileMode.OpenOrCreate | FileMode.Append,
+                    FileAccess.Write, FileShare.ReadWrite);
                         _logger.Warn($"清空文件 {this.config.StdOutFile} 内容");
                     }
                     catch
@@ -322,8 +350,18 @@ namespace Ancn.WbtGuardService.Utils
                 if (redirectStdErr)
                 {
                     try
-                    {
-                        File.Delete(this.config.StdErrorFile);
+                    {                        
+                        using (var stream = new FileStream(this.config.StdErrorFile, FileMode.Truncate,
+                            FileAccess.Write, FileShare.ReadWrite))
+                        {
+                            stream.Seek(0, SeekOrigin.Begin);
+                            stream.SetLength(0);
+                            stream.Flush();
+                        }
+                        stderrorStream.Close();
+                        stderrorStream = new FileStream(this.config.StdErrorFile, FileMode.OpenOrCreate | FileMode.Append,
+                    FileAccess.Write, FileShare.ReadWrite);
+                        
                         _logger.Warn($"清空文件 {this.config.StdErrorFile} 内容");
                     }
                     catch
@@ -333,7 +371,10 @@ namespace Ancn.WbtGuardService.Utils
                     }
                 }
             }
-           
+            else if(command == "Status")
+            {
+                p = new MyProcessInfo(Process.GetProcessesByName(config.Name)?.FirstOrDefault());
+            }
             return p;
         }
     }

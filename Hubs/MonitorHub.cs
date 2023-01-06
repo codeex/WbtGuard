@@ -1,4 +1,4 @@
-using Ancn.WbtGuardService;
+using WbtGuardService;
 
 using CliWrap;
 
@@ -28,26 +28,18 @@ public class MonitorHub : Hub<IMonitorClient>
         //await this.Status(null);
     }
 
-    public async Task ClearLog(string processName)
+    public async Task ClearLogs(string processName)
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
-        await service.SendCommandNoReturn(new Message { 
+        await service.SendCommand(new Message { 
             ClientId = Context.ConnectionId,
-            Command = "ClearLog",
+            Command = "ClearLogs",
             Content = processName,
             ProcessName = processName,
         }, waitSource.Token);
 
-        if (waitSource.IsCancellationRequested)
-        {
-            await Clients.Caller.Status(new Message
-            {
-                Command = "ClearLog",
-                ProcessName = processName,
-                Content = "未知"
-            });
-        }
+        
     }
     public List<string> GetServices()
     {
@@ -87,7 +79,11 @@ public class MonitorHub : Hub<IMonitorClient>
         {
             Command = "Restart",
             ProcessName = processName,
-            Content = "重启中"
+            Content = "重启中",
+            Status = new ProcessRunStatus
+            {
+                Status = "重启中",                
+            }
         });        
        
         await service.SendCommand(new Message
