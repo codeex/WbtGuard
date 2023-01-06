@@ -5,6 +5,7 @@ using Topshelf.Logging;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Hosting.Server;
 using WbtGuardService.Hubs;
+using WbtGuardService.Utils;
 
 namespace Ancn.WbtGuardService
 {
@@ -21,7 +22,8 @@ namespace Ancn.WbtGuardService
 
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddSignalR();
+            services.AddSignalR();
+            services.AddSingleton<MessageQueueService>();
             services.AddRazorPages();
             services.AddHostedService<DaemonService>();
         }
