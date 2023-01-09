@@ -1,11 +1,11 @@
 ﻿@page
 @model WbtGuardService.Pages.PrivacyModel
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
 @{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>本软件完全开源和免费，你可以自由复制分发和授权</p>
-
-<p>开源地址： <a target="_blank" href="https://github.com/codeex/WbtGuard">github 源代码仓库</a></p>
-<p>作者博客： <a target="_blank" href="https://blog.csdn.net/codeex">webmote博客</a></p>
+@Localizer["License"]

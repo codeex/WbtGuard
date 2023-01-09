@@ -9,9 +9,13 @@ public class MyProcessInfo
 {
     public MyProcessInfo(Process p)
     {
-        Id = p?.Id.ToString();
-        ProcessName = p?.ProcessName;
-        StartTime = p?.StartTime ?? DateTime.Now;
+        try
+        {
+            Id = p?.Id.ToString();
+            ProcessName = p?.ProcessName;
+            StartTime = p?.StartTime ?? DateTime.Now;
+        }
+        catch { StartTime = DateTime.Now; }
     }
     public string Id { get; set; }
     public string ProcessName { get; set; }

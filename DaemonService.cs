@@ -78,8 +78,13 @@ public class DaemonService : BackgroundService, IDisposable
     private async Task NotifyStatus(string name, MyProcessInfo p)
     {
         ProcessRunStatus status;
-        var s = p?.Id != null ? "运行" : "停止";        
+        var isCn = LocalizationConstants.Lang == "zh-CN";
         
+        var s = p?.Id != null ? "运行" : "停止";
+        if (!isCn)
+        {
+            s = p?.Id != null ? "Running" : "Stop";
+        }
         status = new ProcessRunStatus
         {
             Status = s,

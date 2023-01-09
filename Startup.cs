@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Hosting.Server;
 using WbtGuardService.Hubs;
 using WbtGuardService.Utils;
+using WbtGuardService.Middleware;
 
 namespace WbtGuardService
 {
@@ -24,8 +25,15 @@ namespace WbtGuardService
         {
             services.AddSignalR();
             services.AddSingleton<MessageQueueService>();
-            services.AddRazorPages();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                options.AddSupportedUICultures(LocalizationConstants.SupportedLanguages.Select(x => x.Code).ToArray());
+                options.FallBackToParentUICultures = true;
+            });
+            //services.AddMvc();
+            services.AddRazorPages().AddViewLocalization(options=>options.ResourcesPath="Resources");
             services.AddHostedService<DaemonService>();
+            services.AddScoped<RequestLocalizationCookiesMiddleware>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -39,6 +47,8 @@ namespace WbtGuardService
             {
                 try
                 {
+                    app.UseRequestLocalization();
+                    app.UseRequestLocalizationCookies();
                     // Configure the HTTP request pipeline.
                     if (!env.IsDevelopment())
                     {
@@ -50,9 +60,10 @@ namespace WbtGuardService
 
                     app.UseAuthorization();
                     app.UseEndpoints(endpoints =>
-                    {
+                    {                      
                         endpoints.MapHub<MonitorHub>("/monitor");
                         endpoints.MapRazorPages();
+                        endpoints.MapControllerRoute("default", "{controller=Index}/{action=Index}");                   
                     });
                     _logger.Info($"web服务: {string.Join(",", url)}");
 
