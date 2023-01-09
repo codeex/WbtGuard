@@ -3,18 +3,20 @@
 @{
     ViewData["Title"] = "Wbt Guard Service";
 }
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 <div class="text-center">
-    <h1 class="display-4">守护程序列表</h1>
+    <h1 class="display-4">@Localizer["Daemon List"]</h1>
     <div id="services">
         <table class="table table-bordered">
             @*<caption>WbtGuardService 1.0</caption>*@
             <thead>
                 <tr>
-                    <th>状态</th>
-                    <th>描述</th>
-                    <th>程序名</th>
-                    <th>控制</th>
+                    <th>@Localizer["State"]</th>
+                    <th>@Localizer["Desc"]</th>
+                    <th>@Localizer["Application"]</th>
+                    <th>@Localizer["Control"]</th>
                 </tr>
             </thead>
             <tbody id="svrlist">
@@ -73,11 +75,11 @@
                 console.log("SignalR Connected.");
 
                 var li = '<tr id="$id"><td class="state">$satte</td><td class="desc">$desc</td><td class="id">$id</td><td class="action">'+
-                     '<a onclick="exec(\'$id\',\'Restart\')" href="javascript:void(0);">重启</a>'+
-                    '<a onclick="exec(\'$id\',\'Start\')" href="javascript:void(0);">启动</a>' +
-                    '<a onclick="exec(\'$id\',\'Stop\')" href="javascript:void(0);">停止</a>' +
-                    '<a onclick="exec(\'$id\',\'ClearLogs\')" href="javascript:void(0);">清理日志</a>' +
-                    '<a onclick="exec(\'$id\',\'LastLogs\')" href="javascript:void(0);">查看日志</a>' +
+                    '<a onclick="exec(\'$id\',\'Restart\')" href="javascript:void(0);">@Localizer["Restart"]</a>' +
+                    '<a onclick="exec(\'$id\',\'Start\')" href="javascript:void(0);">@Localizer["Start"]</a>' +
+                    '<a onclick="exec(\'$id\',\'Stop\')" href="javascript:void(0);">@Localizer["Stop"]</a>' +
+                    '<a onclick="exec(\'$id\',\'ClearLogs\')" href="javascript:void(0);">@Localizer["Clear Logs"]</a>' +
+                    '<a onclick="exec(\'$id\',\'LastLogs\')" href="javascript:void(0);">@Localizer["Logs"]</a>' +
                     '</td></tr>'
 
                 try{
@@ -87,8 +89,8 @@
                         $("#svrlist").html();
                         for(var i=0;i< services.length;i++){
                                 var s = li.replace(/\$id/g, services[i])
-                                    .replace(/\$satte/g, '未知')
-                                    .replace(/\$desc/g, '未知');
+                                .replace(/\$satte/g, '@Localizer["Unknown"]')
+                                .replace(/\$desc/g, '@Localizer["Unknown"]');
                                 $("#svrlist").append(s)
                         }
                     }
@@ -111,10 +113,10 @@
                     var parent = $(document.getElementById(id));
                     parent.children('.state').text(msg.status.status);
                     if(msg.status.pid && msg.status.upTime){
-                        parent.children('.desc').text('[' + msg.status.pid  + '],运行:' + msg.status.upTime);
+                        parent.children('.desc').text('[' + msg.status.pid  + '],@Localizer["Uptime:"]' + msg.status.upTime);
                     }
                     else if (msg.status.pid) {
-                        parent.children('.desc').text('[' + msg.status.pid + '],运行:');
+                        parent.children('.desc').text('[' + msg.status.pid + '],@Localizer["Uptime:"]');
                     }
                     else{
                         parent.children('.desc').text('');
@@ -134,7 +136,7 @@
             if (msg && msg.command) {
                 if (msg.command == 'LastLogs') {
                     var id = msg.processName;
-                    $('#staticBackdropLabel').text('程序 ' + id);
+                    $('#staticBackdropLabel').text('@Localizer["App"] ' + id);
                     $('#logContent').text(msg.content)
                     myModal.show();
 

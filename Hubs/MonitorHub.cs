@@ -8,24 +8,29 @@ using System;
 using System.Threading.Tasks;
 
 using WbtGuardService.Utils;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Localization;
 
 namespace WbtGuardService.Hubs;
 
 public class MonitorHub : Hub<IMonitorClient>
 {
-    public MonitorHub(MessageQueueService service, IConfiguration config)
+    public MonitorHub(MessageQueueService service, IConfiguration config, IOptions<RequestLocalizationOptions> options)
     {
         this.service = service;
         this.config = config;
+        this.options = options.Value;
     }
     private static int _timeout = 30000;
     private readonly MessageQueueService service;
     private readonly IConfiguration config;
+    private readonly RequestLocalizationOptions options;
 
     public override async Task OnConnectedAsync()
     {
         await base.OnConnectedAsync();
         //await this.Status(null);
+        LocalizationConstants.Lang = System.Globalization.CultureInfo.CurrentUICulture.Name;
     }
 
     public async Task ClearLogs(string processName)
@@ -74,7 +79,7 @@ public class MonitorHub : Hub<IMonitorClient>
     {
         CancellationTokenSource timeoutSource = new CancellationTokenSource(_timeout);
         CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, Context.ConnectionAborted);
-       
+        var isCn = System.Globalization.CultureInfo.CurrentUICulture.Name =="zh-CN";
         await Clients.Caller.Status(new Message
         {
             Command = "Restart",
@@ -82,7 +87,7 @@ public class MonitorHub : Hub<IMonitorClient>
             Content = "重启中",
             Status = new ProcessRunStatus
             {
-                Status = "重启中",                
+                Status = isCn? "重启中" :"Restarting",                
             }
         });        
        
@@ -96,12 +101,7 @@ public class MonitorHub : Hub<IMonitorClient>
 
         if (waitSource.IsCancellationRequested)
         {
-            await Clients.Caller.Status(new Message
-            {
-                Command = "Restart",
-                ProcessName = processName,
-                Content = "未知"
-            });
+            
         }
     }
 
