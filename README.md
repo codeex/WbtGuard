@@ -15,6 +15,6 @@ stdout_logfile=d:\test_stdout.log
 arguments=
 ```
 # managing web page.
-![image](https://user-images.githubusercontent.com/3210368/211051096-37f96786-f3d0-4537-bce2-5d5eb881b123.png)
+![image](https://user-images.githubusercontent.com/3210368/211275907-0fa4bc65-f40c-4af6-981c-dd1c53691071.png)
 
 # good luck.
