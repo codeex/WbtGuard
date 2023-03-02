@@ -51,5 +51,12 @@ namespace WbtGuardService
             _stopRequested = true;
             _webHost?.Dispose();
         }
+        public void Shutdown()
+        {
+            _stopRequested = true;
+            _webHost?.Dispose();
+
+            this._logger.Log(LoggingLevel.Warn, "计算机关机");
+        }
     }
 }

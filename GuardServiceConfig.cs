@@ -13,6 +13,8 @@ namespace WbtGuardService
         public string Env { get; set; }
         public string Name { get; set; }
 
+        public bool ShowUI { get; set; }
+
         public Dictionary<string, string> GetEnvironmentVariables()
         {
             var env = new Dictionary<string, string>();
@@ -32,6 +34,7 @@ namespace WbtGuardService
 
         internal static GuardServiceConfig Load(IConfiguration config, string  key)
         {
+            bool.TryParse(config[$"{key}:showui"],out var showUI);
             return new GuardServiceConfig
             {
                 Name = key.Split(":")[1],
@@ -41,6 +44,7 @@ namespace WbtGuardService
                 StdErrorFile = config[$"{key}:stderr_logfile"],
                 StdOutFile = config[$"{key}:stdout_logfile"],
                 Env = config[$"{key}:env"],
+                ShowUI = showUI,
 
             };
         }
