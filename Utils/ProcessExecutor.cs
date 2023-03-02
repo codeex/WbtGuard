@@ -174,6 +174,7 @@ namespace WbtGuardService.Utils
                     }
                     else
                     {
+                        //https://github.com/dotnet/runtime/blob/212fb547303cc9c46c5e0195f530793c30b67669/src/libraries/System.Diagnostics.Process/src/System/Diagnostics/Process.Windows.cs
                         // Null value means we should remove the variable
                         // https://github.com/Tyrrrz/CliWrap/issues/109
                         // https://github.com/dotnet/runtime/issues/34446
@@ -184,7 +185,7 @@ namespace WbtGuardService.Utils
                 p = new Process
                 {
                     StartInfo =startInfo,
-                };
+                };                
                 
                 p.ErrorDataReceived += P_ErrorDataReceived;
                 p.OutputDataReceived += P_OutputDataReceived;
