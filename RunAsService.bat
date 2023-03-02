@@ -1,0 +1,3 @@
+call WbtGuardService.exe install --autostart 
+echo start guard service...
+call WbtGuardService.exe start
