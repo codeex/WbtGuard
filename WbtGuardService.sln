@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbtGuardService", "WbtGuardService.csproj", "{2FFD8E8E-DA94-4009-864B-8B952229CADE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guard.Test", "..\Guard.Test\Guard.Test.csproj", "{30A8DE6A-DABD-4618-A81F-BB5FF3928B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{D039C3B6-9426-43E3-984A-4A316768B5D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2FFD8E8E-DA94-4009-864B-8B952229CADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FFD8E8E-DA94-4009-864B-8B952229CADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FFD8E8E-DA94-4009-864B-8B952229CADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A8DE6A-DABD-4618-A81F-BB5FF3928B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A8DE6A-DABD-4618-A81F-BB5FF3928B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A8DE6A-DABD-4618-A81F-BB5FF3928B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A8DE6A-DABD-4618-A81F-BB5FF3928B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D039C3B6-9426-43E3-984A-4A316768B5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D039C3B6-9426-43E3-984A-4A316768B5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D039C3B6-9426-43E3-984A-4A316768B5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D039C3B6-9426-43E3-984A-4A316768B5D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

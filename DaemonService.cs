@@ -47,59 +47,28 @@ public class DaemonService : BackgroundService, IDisposable
         {
             nInterval = 50;
         }
-        CancellationTokenSource timeoutSource = new CancellationTokenSource();
-        CancellationTokenSource waitSource = CancellationTokenSource.CreateLinkedTokenSource(timeoutSource.Token, stoppingToken);
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            try
+            
+            _logger.Info("检查配置的程序是否启动...");
+            foreach (var c in pes)
             {
-                _logger.Info("检查配置的程序是否启动...");
-                foreach (var c in pes)
-                {
-                    var p = c.Execute();
-                    //await NotifyStatus(c.Name, p);
-                }
+                var p = c.Execute();
+                //await NotifyStatus(c.Name, p);
+                if (stoppingToken.IsCancellationRequested) break;
+            }
 
-                timeoutSource.TryReset();
-                timeoutSource.CancelAfter(nInterval);
-                var hasCommand = await queueService.Reader.WaitToReadAsync(timeoutSource.Token);
-                if (hasCommand)
-                {
-                    var command = await queueService.Reader.ReadAsync(timeoutSource.Token);
-                    {
-                        await ExecuteCommand(command, pes);
-                    }
-                }
-                else
-                {
-                    var command = new Message
-                    {
-                        ClientId = string.Empty,
-                        Command = "Status",
-                        Content = string.Empty,
-                        ProcessName = string.Empty,
-                    };
-                    await ExecuteCommand(command, pes);
-                }
-            }
-            catch(Exception ex)
+
+            if(queueService.Reader.TryRead(out var command))
             {
-                _logger.Info($"执行检查进程失败...,{ex.Message}");
-                try
-                {
-                    var command = new Message
-                    {
-                        ClientId = string.Empty,
-                        Command = "Status",
-                        Content = string.Empty,
-                        ProcessName = string.Empty,
-                    };
-                    await ExecuteCommand(command, pes);
-                }
-                catch { }
+                await ExecuteCommand(command, pes);
             }
-            //await Task.Delay(nInterval);
+            else
+            {
+                await Task.Delay(nInterval);           
+                //Thread.Sleep(nInterval);
+            }
         }
 
         pes.ForEach(x => x.Dispose());
@@ -121,22 +90,14 @@ public class DaemonService : BackgroundService, IDisposable
             Pid = p?.Id,
             UpTime = (p?.Id !=null) ? (DateTime.Now - p.StartTime).ToString(@"dd\.hh\:mm\:ss") :"",
         };
-        using (CancellationTokenSource timeoutSource = new CancellationTokenSource())
+        await hubContext.Clients.All.SendAsync("Status", new Message
         {
-            try
-            {
-                timeoutSource.CancelAfter(200);
-                await hubContext.Clients.All.SendAsync("Status", new Message
-                {
-                    Command = "Status",
-                    ProcessName = name ?? p?.ProcessName,
-                    Content = s,
-                    Status = status
-                }, timeoutSource);
-            }
-            catch { }
-        }
-           
+            Command = "Status",
+            ProcessName = name ?? p?.ProcessName,
+            Content = s,
+            Status = status
+        });
+
     }
     private async Task  ExecuteCommand(Message command, List<ProcessExecutor> pes)
     {
